@@ -1,0 +1,12 @@
+当返回状态码是200，但没有任何返回值的时候，检查一下xpath是否提取到数据
+
+## 做一下 去重 处理
+download = list(set(down_list))
+download.sort(key=down_list.index)
+si['download'] = download
+
+保存数据
+scrapy crawl 爬虫名称 -o 保存的文件名
+
+保存到数据库
+若在piplines文件中编写了代码，需要在settings.py中打开piplines设置
